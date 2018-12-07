@@ -1,19 +1,13 @@
 function digitPerkalianMinimum(angka) {
-  var amount = 0;
   var result = [];
   for(var i=1;i<=angka;i++){
-    var val = Number(angka/i+''+i);
-  	if(angka%i == 0 && result.indexOf(val) == -1){
-  		result.push(val);
+  	if(angka%i == 0 && result.indexOf(Number(angka/i+''+i)) == -1){
+  		result.push(Number(i+''+angka/i));
   	}
   }
-  result.sort();
-  var x = result[0].length;
-  for(var i=0;i<result.length;i++){
-  	if(result[i].length == x)
-  		amount++;
-  }
-  return amount;
+  result.sort(function(a,b){ return a-b; });
+  var jumlah_digit = result[0].toString().length;
+  return jumlah_digit;
 }
 
 // TEST CASES
