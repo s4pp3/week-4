@@ -4,11 +4,7 @@ function urutkanAbjad(str) {
   	sorted_asc.push(str[i]);
   }
   sorted_asc.sort();
-  var result = "";
-  for(var i=0;i<sorted_asc.length;i++){
-  	result = result + sorted_asc[i];
-  }
-  return "'"+result+"'";
+  return "'"+result.join('')+"'";
 }
 
 // TEST CASES
