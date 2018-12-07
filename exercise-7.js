@@ -4,7 +4,7 @@ function urutkanAbjad(str) {
   	sorted_asc.push(str[i]);
   }
   sorted_asc.sort();
-  return "'"+result.join('')+"'";
+  return "'"+sorted_asc.join('')+"'";
 }
 
 // TEST CASES
