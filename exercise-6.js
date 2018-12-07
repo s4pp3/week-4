@@ -2,8 +2,9 @@ function digitPerkalianMinimum(angka) {
   var amount = 0;
   var result = [];
   for(var i=1;i<=angka;i++){
-  	if(angka%i == 0 && result.indexOf(angka/i+''+i) == -1){
-  		result.push(i+''+angka/i);
+    var val = Number(angka/i+''+i);
+  	if(angka%i == 0 && result.indexOf(val) == -1){
+  		result.push(val);
   	}
   }
   result.sort();
